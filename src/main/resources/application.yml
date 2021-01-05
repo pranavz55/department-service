@@ -1,5 +1,5 @@
 server:
-  port: 9001
+  port: 0
   
 spring:
   datasource:
@@ -20,5 +20,7 @@ eureka:
     fetch-registry: true
     service-url:
       deafultZone: http://localhost:8761/eureka/
-
+    instance:
+    instance-id: ${spring.application.name}-${random.int}
+#To generate random port use instance property and set server.port to 0
      
